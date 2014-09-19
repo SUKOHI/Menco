@@ -29,6 +29,10 @@ Usage
 		'url' => URL::to('/'), 
 		'class' => 'btn btn-danger', 
 		'message' => 'Are you sure?'
+	), array(
+		'data' => 'data', 
+		'data2' => 'data2', 
+		'data3' => 'data3'
 	));
 
 	// All of the parameters are skippable.
