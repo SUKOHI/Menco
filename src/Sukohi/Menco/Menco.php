@@ -19,7 +19,7 @@ class Menco {
 		$hidden = $this->hiddenTag($data);
 		
 		return '<form'. $form_property .' style="display:none;">'. $hidden .'</form>'.
-					'<a href="#" '. $class .'onclick="if(confirm(\''. $message .'\')){ document.getElementById(\''. $id .'\').submit(); } return false;">'. $label .'</button>';
+					'<a href="#" '. $class .'onclick="if(confirm(\''. $message .'\')){ document.getElementById(\''. $id .'\').submit(); } return false;">'. $label .'</a>';
 		
 	}
 	
