@@ -17,7 +17,11 @@ Also
 
     'aliases' => array(  
         ...Others...,  
+<<<<<<< HEAD
         'Sukohi\Menco\Facades\Menco',
+=======
+        'Sukohi\Menco\MencoServiceProvider'  
+>>>>>>> ce43c350e4287e3b3a010ebe284ed7662775c525
     )
 
 Usage

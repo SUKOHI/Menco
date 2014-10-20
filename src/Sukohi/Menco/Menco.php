@@ -6,11 +6,16 @@ class Menco {
 
 		$id = (isset($params['id'])) ? 'menco_'. $params['id'] : 'menco_'. md5(uniqid(rand(),1));
 		$url = (isset($params['url'])) ? $params['url'] : '';
+<<<<<<< HEAD
 		$method = (isset($params['method'])) ? strtoupper($params['method']) : 'POST';
+=======
+		$method = (isset($params['method'])) ? $params['method'] : 'POST';
+>>>>>>> ce43c350e4287e3b3a010ebe284ed7662775c525
 		$label = (isset($params['label'])) ? $params['label'] : 'submit';
 		$class = (isset($params['class'])) ? ' class="'. $params['class'] .'" ' : '';
 		$message = (isset($params['message'])) ? $params['message'] : 'Are you sure?';
 
+<<<<<<< HEAD
 		if($method == 'PUT' || $method == 'DELETE') {
 				
 			$data += array('_method' => $method);
@@ -18,12 +23,17 @@ class Menco {
 				
 		}
 		
+=======
+>>>>>>> ce43c350e4287e3b3a010ebe284ed7662775c525
 		$form_property = $this->property(array(
 			'id' => $id,
 			'action' => $url, 
 			'method' => $method
 		));
+<<<<<<< HEAD
 		
+=======
+>>>>>>> ce43c350e4287e3b3a010ebe284ed7662775c525
 		$hidden = $this->hiddenTag($data);
 		
 		return '<form'. $form_property .' style="display:none;">'. $hidden .'</form>'.
