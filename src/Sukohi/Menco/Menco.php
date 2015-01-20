@@ -23,6 +23,7 @@ class Menco {
 			'action' => $url, 
 			'method' => $method
 		));
+
 		$hidden = $this->hiddenTag($data);
 		
 		$propertyies = '';
@@ -47,6 +48,13 @@ class Menco {
 		
 		return '<form'. $form_property .' style="display:none;">'. $hidden .'</form>'.
 					'<a href="#" '. $class . $propertyies .'onclick="if(confirm(\''. $message .'\')){ document.getElementById(\''. $id .'\').submit(); } return false;">'. $label .'</a>';
+
+		
+		$hidden = $this->hiddenTag($data);
+		
+		return '<form'. $form_property .' style="display:none;">'. $hidden .'</form>'.
+					'<a href="#" '. $class .'onclick="if(confirm(\''. $message .'\')){ document.getElementById(\''. $id .'\').submit(); } return false;">'. $label .'</a>';
+
 		
 	}
 	

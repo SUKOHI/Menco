@@ -29,9 +29,12 @@ Usage
 		'label' => 'remove', 
 		'url' => URL::to('/'), 
 		'class' => 'btn btn-danger', 
+
 		'message' => 'Are you sure?', 
 		'title' => 'title', // Skippable: Property you want.
-		'data-value' => 'value' // Skippable: Property you want.
+		'data-value' => 'value', // Skippable: Property you want.
+		'message' => 'Are you sure?'
+
 	), array(
 		'data' => 'data', 
 		'data2' => 'data2', 
