@@ -77,7 +77,8 @@ class Menco {
 		
 		foreach ($data as $name => $value) {
 			
-			$return .= '<input type="hidden" name="'. $name .'" value="'. $value .'">';
+			$return .= '<input type="hidden" name="'. $name .'" value="'. $value .'">'
+						.'<input type="hidden" name="_token" value="'. csrf_token() .'">';
 			
 		}
 		
