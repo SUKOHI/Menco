@@ -9,6 +9,10 @@ class Menco extends Facade {
    *
    * @return string
    */
-  protected static function getFacadeAccessor() { return 'menco'; }
+  protected static function getFacadeAccessor() {
+
+    return 'menco';
+
+  }
  
 }

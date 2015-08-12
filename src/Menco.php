@@ -2,7 +2,7 @@
 
 class Menco {
 	
-	public function get($params=array(), $data=array()) {
+	public function get($params = [], $data = []) {
 
 		$id = (isset($params['id'])) ? 'menco_'. $params['id'] : 'menco_'. md5(uniqid(rand(),1));
 		$url = (isset($params['url'])) ? $params['url'] : '';
@@ -13,20 +13,19 @@ class Menco {
 
 		if($method == 'PUT' || $method == 'DELETE') {
 				
-			$data += array('_method' => $method);
+			$data += ['_method' => $method];
 			$method = 'POST';
 				
 		}
 		
-		$form_property = $this->property(array(
+		$form_property = $this->property([
 			'id' => $id,
 			'action' => $url, 
 			'method' => $method
-		));
-
+		]);
 		$hidden = $this->hiddenTag($data);
-		
 		$propertyies = '';
+
 		unset(
 				$params['id'], 
 				$params['url'], 
@@ -87,21 +86,3 @@ class Menco {
 	}
 	
 }
-
-/*** Example
-
-	echo Menco::get(array(
-		'id' => 'remove', 
-		'label' => 'remove', 
-		'url' => URL::to('/'), 
-		'class' => 'btn btn-danger', 
-		'message' => 'Are you sure?'
-	), array(
-	    'data' => 'data', 
-	    'data2' => 'data2', 
-	    'data3' => 'data3'
-	));
-
-	// All of the parameters are skippable.
-
- ***/

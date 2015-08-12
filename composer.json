@@ -1,22 +1,19 @@
 {
     "name": "sukohi/menco",
-    "description": "",
+    "description": "A PHP package mainly developed for Laravel to generate `postLink` like cakePHP has.",
     "authors": [
         {
             "name": "Sukohi",
             "email": "capilano.sukohi@gmail.com"
         }
     ],
+    "license": "MIT",
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "laravel/framework": "~5.0"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
-        "psr-0": {
-            "Sukohi\\Menco\\": "src/"
+        "psr-4": {
+            "Sukohi\\Wafu\\": "src/"
         }
     },
     "minimum-stability": "stable"
