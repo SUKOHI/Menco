@@ -28,7 +28,10 @@ class MencoServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['menco'] = $this->app->share(function($app)
+		{
+			return new Menco;
+		});
 	}
 
 	/**
@@ -38,7 +41,7 @@ class MencoServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('menco');
 	}
 
 }
