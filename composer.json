@@ -1,6 +1,6 @@
 {
     "name": "sukohi/menco",
-    "description": "A PHP package mainly developed for Laravel to generate `postLink` like cakePHP has.",
+    "description": "A PHP package mainly developed for Laravel to generate postLink like cakePHP has.",
     "authors": [
         {
             "name": "Sukohi",
