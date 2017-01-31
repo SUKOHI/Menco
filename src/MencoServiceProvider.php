@@ -28,10 +28,11 @@ class MencoServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['menco'] = $this->app->share(function($app)
-		{
-			return new Menco;
-		});
+        $this->app->singleton('menco', function(){
+
+            return new Menco;
+
+        });
 	}
 
 	/**
